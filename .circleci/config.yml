@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Perform ShiftLeft Scan
           command: |
-            scan --build
+            scan -t gosec,staticcheck
       - store_artifacts:
           path: reports
           destination: sast-scan-reports
